@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.intro {
+    background: url(../images/intro-cover.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    nav {
+        position: absolute;
+        ul {
+            display: flex;
+            flex-direction: row;
+        }
+        li {
+            list-style-type: none;
+            text-transform: uppercase;
+            margin-right: 1em;
+        }
+    }
+    .intro-bkg {
+        height: 100%;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        font-family: 'Alfa Slab One', sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 2em;
+        h3, h1 {
+            margin: 0;
+            background: url(../images/text-bkg3.jpeg);
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            -webkit-text-stroke: 2px;
+            -webkit-text-stroke-color: white;
+            transform: scale(1.1,1.4);
+        }
+    }
+}
