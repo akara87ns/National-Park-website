@@ -17,23 +17,41 @@ body {
     .intro nav li {
       list-style-type: none;
       text-transform: uppercase;
-      margin-right: 1em; }
+      margin-right: 1.5em; }
   .intro .intro-bkg {
     height: 100%;
     display: grid;
     justify-content: center;
     align-content: center;
-    font-family: 'Alfa Slab One', sans-serif;
-    text-transform: uppercase;
     text-align: center;
     font-size: 2em; }
     .intro .intro-bkg h3, .intro .intro-bkg h1 {
+      font-family: 'Alfa Slab One', sans-serif;
+      text-transform: uppercase;
       margin: 0;
       background: url(../images/text-bkg3.jpeg);
-      -webkit-text-fill-color: transparent;
+      color: transparent;
       background-clip: text;
-      -webkit-text-stroke: 2px;
+      -webkit-background-clip: text;
+      -webkit-text-stroke: 1px;
       -webkit-text-stroke-color: white;
+      animation: scaleUp 1500ms ease-in-out;
       transform: scale(1.1, 1.4); }
+    .intro .intro-bkg p {
+      font-size: 0.6em; }
+    .intro .intro-bkg button {
+      width: 15%;
+      padding: 1em;
+      margin: 0 auto;
+      border-radius: 0.5em;
+      border: none;
+      text-transform: uppercase; }
+@keyframes scaleUp {
+  0% {
+    transform: scale(1.08, 1.38); }
+  50% {
+    transform: scale(1.15, 1.45); }
+  100% {
+    transform: scale(1.1, 1.4); } }
 
 /*# sourceMappingURL=style.css.map */
