@@ -45,60 +45,71 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-body {
-  color: white;
-  font-family: 'Open Sans', sans-serif; }
-
 .intro {
   background: url(../images/intro-cover.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh; }
   .intro nav {
-    position: absolute; }
-    .intro nav ul {
-      display: flex;
-      flex-direction: row; }
-    .intro nav li {
-      list-style-type: none;
-      text-transform: uppercase;
-      margin-right: 1.5em; }
-  .intro .intro-bkg {
-    height: 100%;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    text-align: center; }
-    .intro .intro-bkg h3, .intro .intro-bkg h1 {
-      font-family: 'Alfa Slab One', sans-serif;
-      text-transform: uppercase;
-      background: url(../images/text-bkg3.jpeg);
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-stroke: 1px;
-      -webkit-text-stroke-color: white;
-      animation: scaleUp 2000ms ease-in-out;
-      transform: scale(1.1, 1.4); }
-    .intro .intro-bkg h1 {
-      font-size: 4em; }
-    .intro .intro-bkg h3 {
-      font-size: 2.5em;
-      margin-bottom: 0.6em; }
-    .intro .intro-bkg p {
-      margin: 0.6em; }
-    .intro .intro-bkg button {
-      width: 15%;
-      padding: 1em;
-      margin: 0 auto;
-      border-radius: 0.5em;
-      border: none;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all 300ms; }
-      .intro .intro-bkg button:hover {
-        width: 17%;
-        box-shadow: 0 0 10px black; }
+    position: absolute;
+    width: 100%; }
+  .intro ul {
+    display: flex;
+    justify-content: flex-end; }
+  .intro li {
+    list-style-type: none;
+    text-transform: uppercase;
+    margin: 1.5em; }
+  .intro a {
+    text-decoration: none;
+    color: white; }
+    .intro a::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: white;
+      margin-top: 0.3em;
+      transition: width 300ms; }
+    .intro a:hover::after {
+      width: 100%; }
+
+.intro-bkg {
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center; }
+  .intro-bkg h3, .intro-bkg h1 {
+    font-family: 'Alfa Slab One', sans-serif;
+    text-transform: uppercase;
+    background: url(../images/text-bkg3.jpeg);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: white;
+    animation: scaleUp 2000ms ease-in-out;
+    transform: scale(1.1, 1.4); }
+  .intro-bkg h1 {
+    font-size: 4em; }
+  .intro-bkg h3 {
+    font-size: 2.5em;
+    margin-bottom: 0.6em; }
+  .intro-bkg p {
+    margin: 1em; }
+  .intro-bkg button {
+    width: 15%;
+    padding: 1em;
+    margin: 0 auto;
+    border-radius: 0.5em;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 300ms; }
+    .intro-bkg button:hover {
+      width: 17%;
+      box-shadow: 0 0 10px black; }
 @keyframes scaleUp {
   0% {
     transform: scale(1.08, 1.38); }
@@ -106,5 +117,8 @@ body {
     transform: scale(1.15, 1.45); }
   100% {
     transform: scale(1.1, 1.4); } }
+body {
+  color: white;
+  font-family: 'Open Sans', sans-serif; }
 
 /*# sourceMappingURL=style.css.map */
