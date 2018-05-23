@@ -45,25 +45,25 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.intro {
+.home {
   background: url(../images/intro-cover.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh; }
-  .intro nav {
+  .home nav {
     position: absolute;
     width: 100%; }
-  .intro ul {
+  .home ul {
     display: flex;
     justify-content: flex-end; }
-  .intro li {
+  .home li {
     list-style-type: none;
     text-transform: uppercase;
     margin: 1.5em; }
-  .intro a {
+  .home a {
     text-decoration: none;
     color: white; }
-    .intro a::after {
+    .home a::after {
       content: "";
       display: block;
       width: 0;
@@ -71,16 +71,16 @@ table {
       background: white;
       margin-top: 0.3em;
       transition: width 300ms; }
-    .intro a:hover::after {
+    .home a:hover::after {
       width: 100%; }
 
-.intro-bkg {
+.home-bkg {
   height: 100%;
   display: grid;
   justify-content: center;
   align-content: center;
   text-align: center; }
-  .intro-bkg h3, .intro-bkg h1 {
+  .home-bkg h3, .home-bkg h1 {
     font-family: 'Alfa Slab One', sans-serif;
     text-transform: uppercase;
     background: url(../images/text-bkg3.jpeg);
@@ -91,25 +91,13 @@ table {
     -webkit-text-stroke-color: white;
     animation: scaleUp 2000ms ease-in-out;
     transform: scale(1.1, 1.4); }
-  .intro-bkg h1 {
+  .home-bkg h1 {
     font-size: 4em; }
-  .intro-bkg h3 {
+  .home-bkg h3 {
     font-size: 2.5em;
     margin-bottom: 0.6em; }
-  .intro-bkg p {
+  .home-bkg p {
     margin: 1em; }
-  .intro-bkg button {
-    width: 15%;
-    padding: 1em;
-    margin: 0 auto;
-    border-radius: 0.5em;
-    border: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 300ms; }
-    .intro-bkg button:hover {
-      width: 17%;
-      box-shadow: 0 0 10px black; }
 @keyframes scaleUp {
   0% {
     transform: scale(1.08, 1.38); }
@@ -117,8 +105,43 @@ table {
     transform: scale(1.15, 1.45); }
   100% {
     transform: scale(1.1, 1.4); } }
+.home-places {
+  background-color: #b6e44c;
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  padding: 1em 0; }
+  .home-places .description {
+    display: grid;
+    justify-content: center;
+    align-content: center; }
+    .home-places .description h3 {
+      font-size: 2em;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 0.5em; }
+  .home-places img {
+    width: 100%; }
+  .home-places .images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.2em;
+    margin: 0.2em; }
+
 body {
   color: white;
   font-family: 'Open Sans', sans-serif; }
+
+button {
+  padding: 1em;
+  margin: 0 auto;
+  border-radius: 0.5em;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 300ms; }
+  button:hover {
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.3);
+    padding: 1em 1.2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
 
 /*# sourceMappingURL=style.css.map */
