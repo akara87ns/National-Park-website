@@ -45,6 +45,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+* {
+  box-sizing: border-box; }
+
 .home {
   background: url(../images/intro-cover.jpeg);
   background-size: cover;
@@ -52,7 +55,8 @@ table {
   height: 100vh; }
   .home nav {
     position: absolute;
-    width: 100%; }
+    width: 100%;
+    background-color: rgba(44, 44, 44, 0.5); }
   .home ul {
     display: flex;
     justify-content: flex-end; }
@@ -109,7 +113,7 @@ table {
   background-color: #b6e44c;
   display: grid;
   grid-template-columns: 0.7fr 1.3fr;
-  padding: 1em 0; }
+  padding: 2em 0; }
   .home-places .description {
     display: grid;
     justify-content: center;
@@ -129,11 +133,17 @@ table {
       left: 50%;
       transform: translate(-50%, -50%);
       width: 80%;
-      height: 80%; }
+      height: 80%;
+      outline: 5px solid rgba(44, 44, 44, 0.08);
+      outline-offset: 5px; }
   .home-places figure {
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
+    .home-places figure img:hover {
+      transform: scale(1.1); }
   .home-places img {
-    width: 100%; }
+    width: 100%;
+    transition: transform 300ms ease-in-out; }
   .home-places figcaption {
     position: absolute;
     width: 100%;
@@ -145,6 +155,63 @@ table {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 0.2em;
     margin: 0.2em; }
+
+.activities {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  background-color: #3f96cd;
+  padding: 2em 0; }
+  .activities .description {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    position: relative; }
+    .activities .description h3 {
+      font-size: 2em;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 0.5em; }
+    .activities .description h3::before {
+      content: "";
+      display: block;
+      background-color: rgba(44, 44, 44, 0.08);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 80%;
+      outline: 5px solid rgba(44, 44, 44, 0.08);
+      outline-offset: 5px; }
+  .activities .tabs {
+    display: flex; }
+    .activities .tabs li > input {
+      display: none; }
+    .activities .tabs label {
+      display: inline-block;
+      padding: 1em;
+      margin: 0.3em;
+      border: 1px solid white;
+      text-transform: uppercase;
+      text-align: center;
+      cursor: pointer; }
+  .activities .activities-details {
+    position: relative; }
+    .activities .activities-details img {
+      width: 100%; }
+    .activities .activities-details .details-description {
+      display: inline-block;
+      width: 90%;
+      position: absolute;
+      bottom: 5%;
+      left: 5%;
+      background-color: rgba(44, 44, 44, 0.6);
+      padding: 1em;
+      border-bottom: 5px solid white; }
+    .activities .activities-details h3 {
+      font-size: 2em;
+      margin-bottom: 0.5em;
+      text-transform: uppercase; }
 
 body {
   color: white;
