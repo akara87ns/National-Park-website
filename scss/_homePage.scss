@@ -1,4 +1,4 @@
-@import "colors";
+@import "vars";
 @import "mixins";
 
 * {
@@ -13,7 +13,7 @@
     nav {
         position: absolute;
         width: 100%;
-        background-color: rgba(44, 44, 44, 0.5);
+        background-color: $transparent-bkg;
     }
     ul {
         display: flex;
@@ -108,7 +108,7 @@
         width: 100%;
         bottom: 0;
         padding: 0.5em;
-        background-color:rgba(44, 44, 44, 0.5);
+        background-color:$transparent-bkg;
     }
     .images {
         display: grid;
@@ -126,41 +126,149 @@
     .description {
         @include description;
     }
-    .tabs {
-        display: flex;
-        li > input {
-            display: none;
-        }
-        label {
-            display: inline-block;
-            // width: 20%;
-            padding: 1em;
-            margin: 0.3em;
-            border: 1px solid white;
-            text-transform: uppercase;
-            text-align: center;
-            cursor: pointer;
-        }
+}
+.activities-content {
+    position: relative;
+    img {
+        width: 98%;
     }
-    .activities-details {
-        position: relative;
-        img {
-            width: 100%;
-        }
-        .details-description {
-            display: inline-block;
-            width: 90%;
-            position: absolute;
-            bottom: 5%;
-            left: 5%;
-            background-color: rgba(44, 44, 44, 0.6);
-            padding: 1em;
-            border-bottom: 5px solid white;
-        }
-        h3 {
-            font-size: 2em;
-            margin-bottom: 0.5em;
-            text-transform: uppercase;
-        }
+    input[type=radio] {
+        display: none;
+    }
+    label {
+        display: inline-block;
+        padding: 1em;
+        margin-right: 0.1em;
+        text-transform: uppercase;
+        text-align: center;
+        cursor: pointer;
+        border-left: 1px solid white;
+        border-top: 1px solid white;
+        border-right: 1px solid white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    input[type=radio]:checked + label {
+        background-color: darken($blue, 10%);
+        padding: 1.1em;
+    }
+    .tab-content {
+        display: none;
+    }
+    #tab-1:checked ~ #tab-content1, 
+    #tab-2:checked ~ #tab-content2,
+    #tab-3:checked ~ #tab-content3,
+    #tab-4:checked ~ #tab-content4, {
+        display: block;
     }
 }
+    // .activities-content {
+    //     position: relative;
+    //     .tabs {
+    //         display: flex;
+    //         // position: relative;
+    //         // height: 100%;
+    //     }
+    //     img {
+    //         width: 98%;
+    //     }
+    //     li > input {
+    //         display: none;
+    //     }
+    //     label {
+    //         display: inline-block;
+    //         padding: 1em;
+    //         margin-right: 0.2em;
+    //         text-transform: uppercase;
+    //         text-align: center;
+    //         cursor: pointer;
+    //         border-left: 1px solid white;
+    //         border-top: 1px solid white;
+    //         border-right: 1px solid white;
+    //     }
+    //     .tab-content {
+    //         display: none;
+    //         position: absolute;
+    //         left: 0;
+    //     }
+    //     .tab-details {
+    //         position: absolute;
+    //         bottom: 5%;
+    //         left: 4%;
+    //         background-color: $transparent-bkg;
+    //         padding: 0.5em;
+    //         width: 90%;
+    //     }
+    //     h3 {
+    //         font-size: 2em;
+    //         margin-bottom: 0.5em;
+    //         text-transform: uppercase;
+    //     }
+
+    //     li > input:checked + label {
+    //         background-color: darken($blue, 10%);
+    //     }
+
+    //     li > input:checked ~ .tab-content {
+    //         display: block;
+    //     }
+    // }
+// }
+
+
+// .activities {
+//     display: grid;
+//     grid-template-columns: 0.7fr 1.3fr;
+//     grid-gap: 0.2em;
+//     background-color: $blue;
+//     padding: 2em 0;
+//     .description {
+//         @include description;
+//     }
+    // .tabs {
+    //     display: flex;
+    //     // flex-grow: 1;
+    //     li > input {
+    //         display: none;
+    //     }
+    //     label {
+    //         display: inline-block;
+    //         // width: 20%;
+    //         padding: 1em;
+    //         margin-right: 0.2em;
+    //         text-transform: uppercase;
+    //         text-align: center;
+    //         cursor: pointer;
+    //         border-left: 1px solid white;
+    //         border-top: 1px solid white;
+    //         border-right: 1px solid white;
+        // } input:checked {
+        //     label {
+        //         border-right: 1px solid white;
+        //         border-left: 1px solid white;
+        //         border-top: 1px solid white;
+        //     }
+    //     }
+    // }
+    // .activities-details {
+    //     position: relative;
+    //     img {
+    //         width: 100%;
+    //     }
+    //     .details-description {
+    //         display: inline-block;
+    //         width: 90%;
+    //         position: absolute;
+    //         bottom: 5%;
+    //         left: 5%;
+    //         background-color: $transparent-bkg;
+    //         padding: 1em;
+    //         border-bottom: 5px solid white;
+    //     }
+    //     h3 {
+    //         font-size: 2em;
+    //         margin-bottom: 0.5em;
+    //         text-transform: uppercase;
+    //     }
+    // }
+// }

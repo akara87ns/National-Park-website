@@ -183,35 +183,35 @@ table {
       height: 80%;
       outline: 5px solid rgba(44, 44, 44, 0.08);
       outline-offset: 5px; }
-  .activities .tabs {
-    display: flex; }
-    .activities .tabs li > input {
-      display: none; }
-    .activities .tabs label {
-      display: inline-block;
-      padding: 1em;
-      margin: 0.3em;
-      border: 1px solid white;
-      text-transform: uppercase;
-      text-align: center;
-      cursor: pointer; }
-  .activities .activities-details {
-    position: relative; }
-    .activities .activities-details img {
-      width: 100%; }
-    .activities .activities-details .details-description {
-      display: inline-block;
-      width: 90%;
-      position: absolute;
-      bottom: 5%;
-      left: 5%;
-      background-color: rgba(44, 44, 44, 0.6);
-      padding: 1em;
-      border-bottom: 5px solid white; }
-    .activities .activities-details h3 {
-      font-size: 2em;
-      margin-bottom: 0.5em;
-      text-transform: uppercase; }
+
+.activities-content {
+  position: relative; }
+  .activities-content img {
+    width: 98%; }
+  .activities-content input[type=radio] {
+    display: none; }
+  .activities-content label {
+    display: inline-block;
+    padding: 1em;
+    margin-right: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
+  .activities-content input[type=radio]:checked + label {
+    background-color: #2d7bac;
+    padding: 1.1em; }
+  .activities-content .tab-content {
+    display: none; }
+  .activities-content #tab-1:checked ~ #tab-content1,
+  .activities-content #tab-2:checked ~ #tab-content2,
+  .activities-content #tab-3:checked ~ #tab-content3,
+  .activities-content #tab-4:checked ~ #tab-content4 {
+    display: block; }
 
 body {
   color: white;
