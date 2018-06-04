@@ -212,6 +212,19 @@ table {
   .activities-content #tab-3:checked ~ #tab-content3,
   .activities-content #tab-4:checked ~ #tab-content4 {
     display: block; }
+  .activities-content .tab-details {
+    position: absolute;
+    width: 90.5%;
+    bottom: 5%;
+    left: 4%;
+    background-color: rgba(44, 44, 44, 0.5);
+    padding: 1em; }
+    .activities-content .tab-details h3 {
+      margin-bottom: 0.5em;
+      text-transform: uppercase;
+      font-size: 2em; }
+    .activities-content .tab-details h3, .activities-content .tab-details p {
+      text-shadow: 1px 1px 2px black; }
 
 body {
   color: white;
