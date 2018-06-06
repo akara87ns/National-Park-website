@@ -48,6 +48,30 @@ table {
 * {
   box-sizing: border-box; }
 
+body {
+  scroll-behavior: smooth;
+  overflow-y: scroll; }
+
+.side-nav {
+  position: absolute;
+  position: fixed;
+  left: 1%;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  justify-content: center;
+  height: 100%; }
+  .side-nav a {
+    text-decoration: none;
+    color: rgba(226, 226, 226, 0.5);
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 0.4em 0;
+    text-shadow: 1px 1px 5px rgba(43, 43, 43, 0.7); }
+    .side-nav a:hover {
+      color: white;
+      font-size: 1.25em; }
+
 .home {
   background: url(../images/intro-cover.jpeg);
   background-size: cover;
@@ -113,15 +137,21 @@ table {
   background-color: #b6e44c;
   display: grid;
   grid-template-columns: 0.7fr 1.3fr;
-  padding: 2em 0; }
+  padding: 2em 0;
+  height: 100%; }
   .home-places .description {
     display: grid;
     justify-content: center;
     align-content: center;
     position: relative; }
+    .home-places .description h3, .home-places .description p {
+      width: 70%;
+      margin: 0 auto;
+      text-align: center; }
+    .home-places .description p {
+      margin-bottom: 1em; }
     .home-places .description h3 {
       font-size: 2em;
-      text-align: center;
       text-transform: uppercase;
       margin-bottom: 0.5em; }
     .home-places .description h3::before {
@@ -160,15 +190,21 @@ table {
   display: grid;
   grid-template-columns: 0.7fr 1.3fr;
   background-color: #3f96cd;
-  padding: 2em 0; }
+  padding: 2em 0;
+  height: 100%; }
   .activities .description {
     display: grid;
     justify-content: center;
     align-content: center;
     position: relative; }
+    .activities .description h3, .activities .description p {
+      width: 70%;
+      margin: 0 auto;
+      text-align: center; }
+    .activities .description p {
+      margin-bottom: 1em; }
     .activities .description h3 {
       font-size: 2em;
-      text-align: center;
       text-transform: uppercase;
       margin-bottom: 0.5em; }
     .activities .description h3::before {
