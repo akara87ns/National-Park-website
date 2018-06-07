@@ -114,11 +114,8 @@ body {
 }
 
 .home-places {
+    @include sections;
     background-color: $green;
-    display: grid;
-    grid-template-columns: 0.7fr 1.3fr;
-    padding: 2em 0;
-    height: 100%;
     .description {
         @include description;
     }
@@ -142,6 +139,7 @@ body {
     }
     .images {
         display: grid;
+        width: 98%;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 0.2em;
         margin: 0.2em;
@@ -149,11 +147,8 @@ body {
 }
 
 .activities {
-    display: grid;
-    grid-template-columns: 0.7fr 1.3fr;
+    @include sections;
     background-color: $blue;
-    padding: 2em 0;
-    height: 100%;
     .description {
         @include description;
     }
@@ -208,4 +203,70 @@ body {
             text-shadow: 1px 1px 2px black;
         }
     }
+}
+
+.accomodation {
+    @include sections;
+    background-color: $yellow;
+    .description {
+        @include description;
+    }
+
+
+    .accomodation1 { 
+        grid-area: one;
+        background: url('../images/accomodation/accomodation1.jpg') no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .accomodation2 { 
+        grid-area: two;
+        background: url('../images/accomodation/accomodation2.jpg') no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .accomodation3 { 
+        grid-area: three;
+        background: url('../images/accomodation/accomodation3.jpg') no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .accomodation4 { 
+        grid-area: four;
+        background: url('../images/accomodation/accomodation4.jpg') no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .accomodation5 { 
+        grid-area: five;
+        background: url('../images/accomodation/accomodation5.jpg') no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .accomodation-offer {
+        display: grid;
+        width: 98%;
+        grid-template-areas:
+            'one one two three'
+            'one one two three'
+            'one one four three'
+            'one one four five'
+            'one one four five';
+        grid-auto-rows: minmax(100px, auto);
+        p {
+            position: absolute;
+            width: 90%;
+            left: 5%;
+            bottom: 2%;
+            padding: 0.3em;
+            text-align: center;
+            background-color: $transparent-bkg;
+        }
+    }
+    
 }

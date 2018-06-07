@@ -30,3 +30,10 @@
             outline-offset: 5px;
         }
 }
+
+@mixin sections {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    padding: 2em 0;
+    height: 100%;
+}
