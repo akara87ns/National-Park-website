@@ -37,3 +37,9 @@
     padding: 2em 0;
     height: 100%;
 }
+
+@mixin grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // grid-gap: 0.5em;
+}
